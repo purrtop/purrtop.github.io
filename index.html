@@ -1,44 +1,152 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <title>PURRTOP</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background: #212121;
+            background-image: url('webbg.jpg');
             font-family: 'courier new', monospace;
-            color: #fff;
+            color: #ffffff;
         }
 
         h1, p {
             margin: 10px;
             padding: 10px;
         }
+
+        .header {
+            background-image: url('header.jpg');
+            width: 100%; 
+            height: 100px;
+            display: flex;
+            align-items: center; 
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        .header img {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0) rotate(0deg); }
+            25% { transform: translateX(-3px) rotate(-2deg); }
+            50% { transform: translateX(3px) rotate(2deg); }
+            75% { transform: translateX(-3px) rotate(-2deg); }
+            100% { transform: translateX(0) rotate(0deg); }
+        }
+
+        .shake-button {
+            transform-origin: center;
+        }
+
+        .shake-button:hover {
+            animation: shake 0.3s ease-in-out infinite;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            margin-left: auto; 
+        }
+
+        .button-container a {
+            text-decoration: none;
+        }
+
+        .header-button {
+            background-color: rgb(98, 0, 0);
+            color: rgb(209, 0, 0);
+            border-radius: 2px;
+            padding: 7px 10px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Courier New', Courier, monospace;
+            border-color: black;
+        }
+
+        .header-button:hover {
+            background-color: darkred;
+        }
+
+        .text-box {
+            background-image: url('jeffyhorror.jpg');
+            padding: 20px;
+            border-radius: none;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+        }
+
+        .video-box {
+            background-image: url('bg.jpg');
+            padding: 20px;
+            border-radius: none;
+            text-align: center;
+            width: fit-content;
+            margin: auto;
+            margin-top: 20px;
+        }
     </style>
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <center>
-    <h1>hello</h1>
-    <p>website isnt finished YET (i dont even know why i made this website im still learnin html.)</p>
-    <p style="margin-top: 10px;">Literally.</p>
-    <div style="padding: 10px;">
-        <video width="640" height="360" controls>
-            <source src="https://github.com/purrtop/purrtop.github.io/raw/refs/heads/main/videos/utomp3.com%20-%20If%20you%20jump%20off%20the%20roof%20youre%20grounded%20Literally_360P.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <a href="https://purrtop.github.io/VISUALZIER.html">
-    <button style="
-    background-color:rgb(221, 102, 102);
-    color: #453636;
-    border-radius: 8px;
-    height: 70px;
-    font-size: 50px;
-    margin-top: 70px;
-    font-family: fantasy;
-    margin-left: 20px;
-    ">3D CUBE VISUALIZER!!</button>
-
-    </a>
-
+        <div class="header">
+            <img src="logo.png" alt="logo" width="150" height="150">
+            <div class="button-container">
+                <a href="https://example.com/page1">
+                    <button 
+                    style="border: 2px solid rgb(188, 0, 0);" 
+                    class="header-button"
+                    
+                    
+                    >this doesn't work yet</button>
+                </a>
+                <a href="https://example.com/page2">
+                    <button style="border: 2px solid rgb(188, 0, 0);"  class="header-button">this doesn't work yet</button>
+                </a>
+                <a href="very-helpful-tutorial.jpg">
+                    <button style="border: 2px solid rgb(188, 0, 0);"  class="header-button">tutorials</button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="text-box">
+            <p>i made tis webside!</p>
+        </div>
+        
+        <div class="video-box">
+            <p>Literally.</p>
+            <video width="640" height="360" controls>
+                <source src="https://github.com/purrtop/purrtop.github.io/raw/refs/heads/main/videos/utomp3.com%20-%20If%20you%20jump%20off%20the%20roof%20youre%20grounded%20Literally_360P.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <a href="https://purrtop.github.io/VISUALZIER.html">
+            <button class="shake-button" style="
+                background-image: url('button.jpg');
+                color: rgb(255, 0, 0);
+                border-radius: 20px;
+                height: 70px;
+                font-size: 50px;
+                margin-top: 70px;
+                font-family: 'Courier New', Courier, monospace;
+                margin-left: 20px;
+                border: none;
+                cursor: pointer;
+            ">3D CUBE VISUALIZER!!</button>
+        </a>
     </center>
 </body>
 </html>
