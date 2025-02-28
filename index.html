@@ -10,6 +10,7 @@
         }
 
         body {
+            background-color: #000000;
             background-image: url('webbg.jpg');
             font-family: 'courier new', monospace;
             color: #ffffff;
@@ -31,26 +32,9 @@
         }
 
         .header img {
-            margin-top: 20px;
+            margin-top: 40px;
             margin-left: 20px;
         }
-
-        @keyframes shake {
-            0% { transform: translateX(0) rotate(0deg); }
-            25% { transform: translateX(-3px) rotate(-2deg); }
-            50% { transform: translateX(3px) rotate(2deg); }
-            75% { transform: translateX(-3px) rotate(-2deg); }
-            100% { transform: translateX(0) rotate(0deg); }
-        }
-
-        .shake-button {
-            transform-origin: center;
-        }
-
-        .shake-button:hover {
-            animation: shake 0.3s ease-in-out infinite;
-        }
-
         .button-container {
             display: flex;
             gap: 15px;
@@ -96,13 +80,37 @@
             margin: auto;
             margin-top: 20px;
         }
+        .animated-rainbow {
+    background-image: -webkit-linear-gradient(left, 
+        #f00, #ff2b00, #f50, #ff8000, #fa0, #d4ff00, 
+        #0f0, #00ff80, #0ff, #00f, #2b00ff, #50f, #f0a
+    );
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    background-size: 300% 100%;
+    animation: animated-bg 3s linear infinite alternate;
+        }
+
+@keyframes animated-bg {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+        }
+
+
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <center>
         <div class="header">
-            <img src="logo.png" alt="logo" width="150" height="150">
+            <img src="logo.png" alt="logo" width="170" height="170">
             <div class="button-container">
                 <a href="https://example.com/page1">
                     <button 
@@ -122,7 +130,7 @@
         </div>
         
         <div class="text-box">
-            <p>i made tis webside!</p>
+        <p class="animated-rainbow">i made tis webside!</p>
         </div>
         
         <div class="video-box">
@@ -133,19 +141,6 @@
             </video>
         </div>
         
-        <a href="https://purrtop.github.io/VISUALZIER.html">
-            <button class="shake-button" style="
-                background-image: url('button.jpg');
-                color: rgb(255, 0, 0);
-                border-radius: 20px;
-                height: 70px;
-                font-size: 50px;
-                margin-top: 70px;
-                font-family: 'Courier New', Courier, monospace;
-                margin-left: 20px;
-                border: none;
-                cursor: pointer;
-            ">3D CUBE VISUALIZER!!</button>
         </a>
     </center>
 </body>
