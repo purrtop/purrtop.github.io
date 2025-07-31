@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url('./items/images/page/grass.webp');
+    background-image: url('/items/images/page/grass.webp');
     background-color: #000000;
     font-family: 'IKNOWAGHOST', sans-serif;
     text-align: center;
