@@ -1,15 +1,41 @@
 @font-face {
     font-family: 'IKNOWAGHOST';
-    src: url('./items/fonts/IKNOWAGHOST.ttf') format('truetype');
+    src: url('items/fonts/IKNOWAGHOST.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    background-color: #372c2c;
+    background-image: url('./items/images/page/grass.webp');
+    background-color: #000000;
     font-family: 'IKNOWAGHOST', sans-serif;
     text-align: center;
     color: #ffffff;
     margin:0 auto; 
+    font-size: 30px;
     max-width: 700px;
+}
+/* default hover effect */
+.hover {
+    transition:
+        transform 0.2s cubic-bezier(0.4, 0.3, 0.2, 1);
+    display: inline-block;
+    transform: perspective(400px) rotateX(20deg) scale(1);
+    background-color: transparent;
+    border-top: 0cap;
+    border-bottom: 0cap;
+    border-left: 0cap;
+    border-right: 0cap;
+}
+
+.hover:hover {
+    transform: perspective(400px) rotateX(0deg) scale(1.56);
+}
+
+@media (hover: hover) {
+    /* when hover is supported */
+    .hover:hover {
+        transform: perspective(400px) rotateX(0deg) scale(1.56);
+
+    }
 }
