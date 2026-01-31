@@ -60,7 +60,7 @@ header {
 .video {
   border: solid 1px rgb(59, 57, 71);
   margin-top: 130px;
-  height: 346px;
+  height: 455px;
 }
 
 .headerlogo {
@@ -70,4 +70,5 @@ header {
 p {
   color: aliceblue;
   padding-top: 350px;
+
 }
